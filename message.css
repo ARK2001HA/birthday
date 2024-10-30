@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&family=Short+Stack&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: cover;
+  padding: 20px 50px;
+  transform: rotateZ(-3deg);
+  box-shadow: 1px 10px 15px rgba(0,0,0,0.3);
+  position: absolute;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: grab;
+}
+
+.paper:hover {
+  transform: rotateZ(0deg) scale(1.05);
+  box-shadow: 1px 15px 20px rgba(0,0,0,0.4);
+}
+
+.paper.heart, .paper.image, .paper.red {
+  text-align: center;
+  padding: 10px;
+}
+
+.paper.heart {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100px;
+  background-position: center;
+  opacity: 0.7;
+}
+
+.paper.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.paper.image img:hover {
+  transform: scale(1.1);
+}
+
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 24px;
+  color: rgb(30, 30, 90);
+  opacity: 0.9;
+  margin: 10px 0;
+}
+
+p.p1 {
+  font-family: 'Short Stack', sans-serif;
+  font-size: 28px;
+  color: rgb(20, 20, 80);
+}

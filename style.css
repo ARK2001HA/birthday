@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient(to bottom, #ff99cc, #ffccff);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+a {
+    cursor: pointer;
+    color: #007bff; /* Optional: for visibility, change link color */
+    text-decoration: none; /* Optional: remove underline */
+}
+
+h1 {
+    text-shadow: 0 0 10px rgba(255, 99, 132, 0.8);
+}
+
+.lead, p {
+    z-index: 2;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.balloons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 35%, #ff6666, #ff3333);
+    animation: floatBalloon 8s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.balloon:nth-child(2) {
+    background: radial-gradient(circle at 50% 35%, #ffcc66, #ff9933);
+    width: 50px;
+    height: 70px;
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    background: radial-gradient(circle at 50% 35%, #66ff66, #33cc33);
+    width: 70px;
+    height: 90px;
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.balloon:nth-child(4) {
+    background: radial-gradient(circle at 50% 35%, #66ccff, #3399ff);
+    width: 60px;
+    height: 80px;
+    left: 75%;
+    animation-delay: 6s;
+}
+
+.balloon:nth-child(5) {
+    background: radial-gradient(circle at 50% 35%, #ff66ff, #cc33cc);
+    width: 80px;
+    height: 100px;
+    left: 90%;
+    animation-delay: 8s;
+}
+
+@keyframes floatBalloon {
+    0% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-400px) rotate(10deg); }
+    100% { transform: translateY(-800px) rotate(-10deg); }
+}
+
+.animate-heartbeat {
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* .glow-button {
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    box-shadow: 0px 4px 15px rgba(255, 78, 80, 0.3);
+    transition: all 0.3s;
+}
+
+.glow-button:hover {
+    box-shadow: 0px 6px 20px rgba(255, 78, 80, 0.6);
+    transform: scale(1.05);
+} */
